@@ -5,6 +5,7 @@ import 'package:language_ai/core/helper/spacing.dart';
 import 'package:language_ai/core/helper/text_button.dart';
 import 'package:language_ai/core/styles.dart';
 import 'package:language_ai/core/text.dart';
+import 'package:language_ai/feature/Auth/login_screen.dart';
 import 'package:language_ai/feature/onboarding/onboarding_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -32,23 +33,28 @@ Widget defultHomePage(Onboarding model, BuildContext context) => Column(
             activeDotColor: MyColor.colorF76400,
           ),
         ),
-        verticalSpacing(40),
+        verticalSpacing(40.h),
         Text(model.title1, style: MyStyles.semiBold22White),
-        verticalSpacing(8),
-        Text(
-          model.title2,
-          style: MyStyles.regular15grey,
-          textAlign: TextAlign.center,
+        verticalSpacing(8.h),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            model.title2,
+            style: MyStyles.regular15grey,
+            textAlign: TextAlign.center,
+          ),
         ),
         verticalSpacing(50),
-        textButton(
-          MyColor.color5B7BFE,
-          Text(
+        MyTextButton(
+          color: MyColor.color5B7BFE,
+          bodyWidget: Text(
             MyText.choosealanguage,
             style: MyStyles.semiBold22White.copyWith(
               fontSize: 20,
             ),
           ),
+          context: context,
+          onTap: () {},
         ),
         verticalSpacing(32),
         Row(
@@ -59,10 +65,18 @@ Widget defultHomePage(Onboarding model, BuildContext context) => Column(
               style: MyStyles.regular15grey,
             ),
             horizontalSpacing(5),
-            Text(
-              MyText.login,
-              style: MyStyles.regular15grey.copyWith(
-                color: MyColor.deepPurple,
+            InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginScreen(),
+                ),
+              ),
+              child: Text(
+                MyText.login,
+                style: MyStyles.regular15grey.copyWith(
+                  color: MyColor.deepPurple,
+                ),
               ),
             ),
           ],

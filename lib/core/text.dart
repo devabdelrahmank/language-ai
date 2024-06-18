@@ -11,4 +11,23 @@ class MyText {
   static const String thelessons = 'The lessons you need to learn';
   static const String usingavariety =
       'Using a variety of learning styles to learn and retain';
+  static const String forFree = 'For free, join now and start learning';
+  static const String emailAddress = 'Email Address';
+  static const String placeholderText = 'Placeholder text';
+  static const String password = 'Password';
+  static const String dot = '●●●●●●●';
+  static const String forgotPassword = 'Forgot Password ';
+  static const String or = 'Or';
+  static const String notYouMember = 'Not you member?';
+  static const String signup = 'Signup';
+  static const String alreadyYouMember = 'Already you member?';
+  static const String createAnAccount = 'Create an Account';
+  static const String continuee = 'Continue';
+  static const String firstName = 'First Name';
+  static const String lastName = 'Last Name';
+  static const String confirmPassword = 'Confirm Password';
+  // static const String signup = 'Signup';
+  // static const String signup = 'Signup';
+  // static const String signup = 'Signup';
+  // static const String signup = 'Signup';
 }

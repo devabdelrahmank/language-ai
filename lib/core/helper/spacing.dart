@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-SizedBox verticalSpacing(double height) => SizedBox(height: height.h);
-SizedBox horizontalSpacing(double width) => SizedBox(width: width.w);
+SizedBox verticalSpacing(double height) => SizedBox(height: height);
+SizedBox horizontalSpacing(double width) => SizedBox(width: width);
+Divider dividerSpacing() => const Divider(color: Colors.grey, thickness: 0.4);

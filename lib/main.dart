@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:language_ai/core/colors.dart';
 import 'package:language_ai/feature/onboarding/onboarding_screen.dart';
 
 void main() {
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(color: MyColor.deepPurple),
+        scaffoldBackgroundColor: MyColor.mainColor,
       ),
       home: const OnboardingScreen(),
     );

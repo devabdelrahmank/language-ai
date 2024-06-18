@@ -48,10 +48,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   void dispose() {
+    boardcontroller.dispose();
     super.dispose();
   }
 
-  bool islast = false;
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -69,12 +69,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 controller: boardcontroller,
                 itemBuilder: (context, index) {
                   return defultHomePage(
-                      Onboarding(
-                        image: onbord[index].image,
-                        title1: onbord[index].title1,
-                        title2: onbord[index].title2,
-                      ),
-                      context);
+                    Onboarding(
+                      image: onbord[index].image,
+                      title1: onbord[index].title1,
+                      title2: onbord[index].title2,
+                    ),
+                    context,
+                  );
                 },
                 itemCount: onbord.length,
                 physics: const BouncingScrollPhysics(),
